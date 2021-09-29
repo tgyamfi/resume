@@ -1,0 +1,172 @@
+:root {
+  --background-color: rgb(216, 216, 216);
+  --body-color: #fff;
+  --body-font-color: rgb(90, 90, 90);
+  --header-font-color: rgb(38, 38, 38);
+  --subheader-font-color: rgb(86, 86, 86);
+  --hr-color: rgb(222, 222, 222);
+  --accent-color: #ff8300;
+}
+
+html,
+body {
+  max-width: 210mm;
+  margin: auto auto;
+}
+
+html {
+  background-color: var(--background-color);
+}
+
+body {
+  font-family: "dm_sansregular";
+  color: var(--body-font-color);
+  background-color: var(--body-color);
+  font-size: 9pt;
+  padding: 3rem;
+  margin: 3rem 0 3rem 0;
+  line-height: 1.8;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "dm_sansmedium";
+  color: var(--header-font-color);
+  letter-spacing: 0.25px;
+}
+
+h1 {
+  font-family: "dm_sansbold";
+  letter-spacing: 1px;
+}
+
+h5,
+h6 {
+  color: var(--subheader-font-color);
+  letter-spacing: 0.5px;
+}
+
+h6 {
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+}
+
+label {
+  font-family: "dm_sansmedium";
+}
+
+header h1,
+header h2,
+header h3 {
+  margin: 0;
+}
+
+a,
+address {
+  display: inline-block;
+  color: var(--accent-color);
+  font-style: inherit;
+  text-decoration: underline;
+}
+
+hr {
+  display: block;
+  margin: 3.5em 0;
+  border: 0.1px solid var(--hr-color);
+  border-bottom-color: var(--hr-color);
+  border-bottom-style: solid;
+  border-bottom-width: 0.1px;
+  border-bottom: none;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  font-size: 95%;
+  margin: 0.25em 0;
+}
+
+ol {
+  counter-reset: item;
+}
+ol li {
+  display: block;
+}
+ol li:before {
+  content: counter(item) " . ";
+  counter-increment: item;
+  font-weight: bold;
+}
+
+em {
+  font-family: "dm_sansmedium";
+}
+
+pre {
+  font-family: inherit;
+  white-space: pre-line;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 20% auto;
+  grid-gap: 2%;
+}
+
+.spill {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+  grid-gap:4% 9%;
+}
+
+.skills em {
+  font-family: "dm_sansmedium";
+  font-size: 75%;
+  display: block;
+  color: var(--accent-color);
+}
+
+.noteworthy {
+  color: var(--accent-color);
+  letter-spacing: 0.75px;
+}
+
+.key-value {
+  display: grid;
+  grid-template-columns: auto max-content;
+  grid-gap: 10%;
+}
+
+.contact-info {
+  font-family: "dm_sansmedium";
+  line-height: 1.55;
+}
+
+header.split {
+  grid-template-columns: 33% auto;
+}
+
+@media print {
+  section {
+    page-break-before: avoid;
+  }
+
+  body {
+    max-width: 210mm;
+    margin: 0;
+    font-size: 7pt;
+    box-shadow: none;
+  }
+
+  html {
+    background-color: var(--body-color);
+  }
+}
