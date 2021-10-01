@@ -124,7 +124,7 @@ pre {
 .spill {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
-  grid-gap:4% 9%;
+  grid-gap: 4% 9%;
 }
 
 .skills em {
@@ -155,14 +155,10 @@ header.split {
 }
 
 @media print {
-  section {
-    page-break-before: avoid;
-  }
-
   body {
     max-width: 210mm;
     margin: 0;
-    font-size: 7pt;
+    font-size: 70%;
     box-shadow: none;
   }
 
